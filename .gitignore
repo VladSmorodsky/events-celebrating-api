@@ -140,6 +140,7 @@ vite.config.ts.timestamp-*
 
 .env
 .env.*
+!.env.example
 coverage/
 *.log
 npm-debug.log*
