@@ -1,0 +1,24 @@
+services:
+  api:
+    container_name: events-celebrating-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3030:3030'
+    depends_on:
+      - mongo
+    volumes:
+      - .:/app
+    # command: npm run dev
+
+  mongo:
+    image: mongo:8.0
+    container_name: events-mongo
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
