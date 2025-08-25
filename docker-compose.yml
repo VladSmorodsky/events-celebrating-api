@@ -10,7 +10,7 @@ services:
       - mongo
     volumes:
       - .:/app
-    # command: npm run dev
+    command: npm run dev
 
   mongo:
     image: mongo:8.0

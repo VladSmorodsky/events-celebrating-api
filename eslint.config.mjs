@@ -41,6 +41,11 @@ export default tseslint.config(
       // add your tweaks here
       '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
       'no-console': ['warn', { allow: ['info', 'warn', 'error'] }],
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-misused-promises': [
+        'error',
+        { checksVoidReturn: true }, // keep best practice
+      ],
     },
   },
 
