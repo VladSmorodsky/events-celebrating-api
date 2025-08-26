@@ -2,6 +2,7 @@
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     // File Layout
+    "baseUrl": "./",
     "rootDir": "./src",
     "outDir": "./dist",
 
@@ -42,6 +43,12 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "allowImportingTsExtensions": true
-  }
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@controllers/*": ["./src/controllers/*"],
+      "@services/*": ["./src/services/*"]
+    }
+  },
+  "include": ["src"]
 }

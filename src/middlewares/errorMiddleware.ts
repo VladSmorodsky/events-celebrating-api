@@ -7,7 +7,7 @@ export const errorMiddleware = (error: unknown, req: Request, res: Response, _ne
   if (!errors.isEmpty()) {
     const mappedErrors = errors.mapped();
     const fieldName = Object.keys(mappedErrors)[0]!;
-    return res.status(429).json({
+    return res.status(422).json({
       message: mappedErrors[fieldName]?.msg as string,
       field: fieldName,
     });
